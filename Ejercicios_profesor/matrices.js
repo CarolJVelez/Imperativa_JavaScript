@@ -39,9 +39,9 @@ console.log(Math.min(5.2, 5.4, 25, 58, 12.5)) */
 // columnas se ven de forma vertical
 
 let matrizNumeros = [
-  [1, 2, 3], //primer subarreglo - 0
-  [4, 5, 6], //segundo subarreglo - 1
-  [7, 8, 9] // tercer subarreglo - 2
+    [1, 2, 3], //primer subarreglo - 0
+    [4, 5, 6], //segundo subarreglo - 1
+    [7, 8, 9] // tercer subarreglo - 2
 ]
 
 //console.table(matrizNumeros)
@@ -57,26 +57,26 @@ let matrizNumeros = [
 //recorrer e imprimir con doble for
 
 /* for(let i = 0; i < matrizNumeros.length; i++){
-  for(let j = 0; j < matrizNumeros[i].length;j++ ){
-      console.log(matrizNumeros[i][j])
-  }
+    for(let j = 0; j < matrizNumeros[i].length;j++ ){
+        console.log(matrizNumeros[i][j])
+    }
 } */
 
 /* for(let i = 0; i < matrizNumeros.length; i++){
-  const filas = matrizNumeros[i]
-  for(let j = 0; j < filas.length;j++ ){
-      const columnas = matrizNumeros[i][j]
-      console.log(columnas)
-  }
+    const filas = matrizNumeros[i]
+    for(let j = 0; j < filas.length;j++ ){
+        const columnas = matrizNumeros[i][j]
+        console.log(columnas)
+    }
 } */
 
 
 for(let i = 0; i < matrizNumeros.length; i++){
-  for(let j = 0; j < matrizNumeros[i].length;j++ ){
-      if(matrizNumeros[i][j] % 2 === 0){
-          console.log(matrizNumeros[i][j])
-      }
-  }
+    for(let j = 0; j < matrizNumeros[i].length;j++ ){
+        if(matrizNumeros[i][j] % 2 === 0){
+            console.log(matrizNumeros[i][j])
+        }
+    }
 }
 
 //------------------------------------------
@@ -86,41 +86,41 @@ for(let i = 0; i < matrizNumeros.length; i++){
 
 //crear un funcion y nombrarla "generarMatriz10por10"
 /* function generarMatriz10por10(){
-  //pensar como vamos a mostrar esa matriz
-  let array = []
-  //primer for hace referencia a la creación de las filas, aumenta de 10 en 10
-  for(let i = 0; i <= 90; i += 10){
-      // sirve para las filas que se vayan a crear, para alamacenar los sub elementos
-      let filas = []
-      // segundo for o bucle anidado, nos sirve para la creacion de nuestras clumnas. qe se incrementan de 1 en 1
-      for(let j = 1 ; j<= 10; j++){
-          //por filas se arma el numero que se va a cargar
-          filas.push(i + j)
-      }
-      //terminamos pusheando cada una de las filas dentro de nuestro arreglo principal
-      array.push(filas)
-  }
-  return array
+    //pensar como vamos a mostrar esa matriz
+    let array = []
+    //primer for hace referencia a la creación de las filas, aumenta de 10 en 10
+    for(let i = 0; i <= 90; i += 10){
+        // sirve para las filas que se vayan a crear, para alamacenar los sub elementos
+        let filas = []
+        // segundo for o bucle anidado, nos sirve para la creacion de nuestras clumnas. qe se incrementan de 1 en 1
+        for(let j = 1 ; j<= 10; j++){
+            //por filas se arma el numero que se va a cargar
+            filas.push(i + j)
+        }
+        //terminamos pusheando cada una de las filas dentro de nuestro arreglo principal
+        array.push(filas)
+    }
+    return array
 } */
 
 
 
 function generarMatriz10por10() {
-  let matriz = [];
-  let valor = 1;
-
-  for (let i = 0; i < 10; i++) {
-    let fila = [];
-
-    for (let j = 0; j < 10; j++) {
-      fila.push(valor);
-      valor++;
+    let matriz = [];
+    let valor = 1;
+  
+    for (let i = 0; i < 10; i++) {
+      let fila = [];
+  
+      for (let j = 0; j < 10; j++) {
+        fila.push(valor);
+        valor++;
+      }
+  
+      matriz.push(fila);
     }
-
-    matriz.push(fila);
+  
+    return matriz;
   }
-
-  return matriz;
-}
-let matriz10por10 = generarMatriz10por10()
+  let matriz10por10 = generarMatriz10por10()
 console.table(matriz10por10)

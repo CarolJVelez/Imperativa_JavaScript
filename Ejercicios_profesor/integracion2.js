@@ -9,13 +9,13 @@ Luego, utiliza la función encontrarMultiplos para obtener los múltiplos de 5 h
 //CODIGO
 
 function encontrarMultiplos(numero, limite) {
-  const multiplos = [];
-  for (let i = numero; i < limite; i++) {
-      if (i % numero === 0) {
-          multiplos.push(i);
-      }
-  }
-  return multiplos;
+    const multiplos = [];
+    for (let i = numero; i < limite; i++) {
+        if (i % numero === 0) {
+            multiplos.push(i);
+        }
+    }
+    return multiplos;
 }
 
 const multiplosDe5 = encontrarMultiplos(5, 50);
@@ -30,38 +30,38 @@ Agrega un método al objeto para calcular si el estudiante aprobó o no, conside
 */
 // Crear arreglo de objetos estudiantes
 const estudiantes = [
-  { nombre: 'Ana', notas: [85, 90, 78], aprobado: false },
-  { nombre: 'Carlos', notas: [60, 72, 80], aprobado: false }
-  // Agregar más estudiantes
+    { nombre: 'Ana', notas: [85, 90, 78], aprobado: false },
+    { nombre: 'Carlos', notas: [60, 72, 80], aprobado: false }
+    // Agregar más estudiantes
 ];
 
 // Función para calcular el promedio de notas
 function calcularPromedio(notas) {
-  let sumaNotas = 0;
-  for (let i = 0; i < notas.length; i++) {
-      sumaNotas += notas[i];
-  }
-  return sumaNotas / notas.length;
+    let sumaNotas = 0;
+    for (let i = 0; i < notas.length; i++) {
+        sumaNotas += notas[i];
+    }
+    return sumaNotas / notas.length;
 }
 
 // Función para determinar si el estudiante aprobó
 function calcularAprobacion(estudiante) {
-  const promedio = calcularPromedio(estudiante.notas);
-  return promedio >= 70;
+    const promedio = calcularPromedio(estudiante.notas);
+    return promedio >= 70;
 }
 
 
 // Calcular si los estudiantes aprobaron o no
 for (let i = 0; i < estudiantes.length; i++) {
-  const estudiante = estudiantes[i];
-  estudiante.aprobado = calcularAprobacion(estudiante);
+    const estudiante = estudiantes[i];
+    estudiante.aprobado = calcularAprobacion(estudiante);
 }
 
 // Imprimir estado de aprobación de los estudiantes
 for (let i = 0; i < estudiantes.length; i++) {
-  const estudiante = estudiantes[i];
-  const estado = estudiante.aprobado ? 'aprobado' : 'no aprobado';
-  console.log(`${estudiante.nombre} está ${estado}`);
+    const estudiante = estudiantes[i];
+    const estado = estudiante.aprobado ? 'aprobado' : 'no aprobado';
+    console.log(`${estudiante.nombre} está ${estado}`);
 }
 
 
@@ -76,32 +76,32 @@ let sumaPares = 0;
 let i = 0;
 
 while (i < numeros.length) {
-  if (numeros[i] % 2 === 0) {
-      sumaPares += numeros[i];
-  }
-  i++;
+    if (numeros[i] % 2 === 0) {
+        sumaPares += numeros[i];
+    }
+    i++;
 }
 
 console.log(sumaPares);
 ("-------------------------------")
 
 for (let i = 0; i < numeros.length; i++) {
-  if (numeros[i] % 2 === 0) {
-    sumaPares += numeros[i];
+    if (numeros[i] % 2 === 0) {
+      sumaPares += numeros[i];
+    }
   }
-}
-
-console.log("La suma de los números pares es:", sumaPares);
-
+  
+  console.log("La suma de los números pares es:", sumaPares);
+ 
 
 ("-------------------------------")
 numeros.forEach(numero => {
-  if (numero % 2 === 0) {
-    sumaPares += numero;
-  }
-});
-
-console.log("La suma de los números pares es:", sumaPares);
+    if (numero % 2 === 0) {
+      sumaPares += numero;
+    }
+  });
+  
+  console.log("La suma de los números pares es:", sumaPares);
 
 /* 
 Punto 4: Bucles y Arreglos
@@ -112,13 +112,13 @@ Respuesta y Explicación:
 */
 
 function productoImpares(numeros) {
-  let producto = 1;
-  for (let i = 0; i < numeros.length; i++) {
-      if (numeros[i] % 2 !== 0) {
-          producto *= numeros[i];
-      }
-  }
-  return producto;
+    let producto = 1;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 !== 0) {
+            producto *= numeros[i];
+        }
+    }
+    return producto;
 }
 
 /* 
@@ -130,15 +130,15 @@ Agrega un método al objeto que calcule el impuesto a pagar según el año del v
 */
 
 const vehiculo = {
-  marca: 'Toyota',
-  modelo: 'Corolla',
-  anio: 2015,
-  precio: 20000,
-  calcularImpuesto() {
-      if (this.anio < 2010) {
-          return this.precio * 0.1;
-      } else {
-          return this.precio * 0.05;
-      }
-  }
+    marca: 'Toyota',
+    modelo: 'Corolla',
+    anio: 2015,
+    precio: 20000,
+    calcularImpuesto() {
+        if (this.anio < 2010) {
+            return this.precio * 0.1;
+        } else {
+            return this.precio * 0.05;
+        }
+    }
 };
